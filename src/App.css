@@ -1,0 +1,302 @@
+.App {
+  text-align: center;
+}
+
+/* jaume  */
+
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.theme-black-name {
+  font-family: "Press Start 2P", sans-serif;
+  color: #eee;
+  background-color: rgb(34, 34, 34);
+  height: 100vh;
+}
+
+.header-name {
+  position: relative;
+  height: 75vh;
+  border-bottom: 7px solid #eee;
+}
+
+.guess-number-name {
+  font-size: 5rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 69%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.div-upper-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 78%;
+}
+
+.guess-name {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  padding: 1.5rem;
+  width: 35rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.btn-name {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 11.5rem;
+  cursor: pointer;
+}
+
+.your-name-name {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.black {
+  font-family: "Press Start 2P", sans-serif;
+  color: #eee;
+  background-color: rgb(34, 34, 34);
+  /* background-color: #60b347; */
+}
+
+.green {
+  background-color: rgb(55, 230, 28);
+  font-family: "Press Start 2P", sans-serif;
+}
+
+/* LAYOUT */
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.central {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  width: 52rem;
+  font-size: 2rem;
+}
+
+/* ELEMENTS STYLE */
+.your-name-guess {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.guessNumber {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 15rem;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.between {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.again {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.guess {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.message {
+  margin-bottom: 8rem;
+  height: 3rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}
+
+.label-highscore {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.users-scores {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.user-playing {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.down {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  main {
+    flex-direction: column;
+  }
+  .your-name-name {
+    font-size: 2rem;
+  }
+  .guess-number-name {
+    top: 72%;
+  }
+
+  .guess {
+    font-size: 3rem;
+    padding: 0.5rem;
+    width: 19rem;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .central {
+    padding-top: 76%;
+  }
+
+  .black {
+    height: 122vh;
+  }
+
+  .message {
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+  }
+  .label-score {
+    text-align: center;
+  }
+
+  .between {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 37rem;
+    left: 17%;
+  }
+  .header {
+    height: 37vh;
+  }
+
+  .guessNumber {
+    font-size: 3rem;
+  }
+
+  .your-name-guess {
+    font-size: 2rem;
+  }
+
+  .down {
+    display: block;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  .header-name {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 501px) {
+  .header-name {
+    height: 87vh;
+  }
+}
