@@ -19,14 +19,14 @@ function App() {
 
   const API_URL = process.env.REACT_APP_API_URL;
 
-  console.log(`api url`, API_URL);
+  //console.log(`api url`, API_URL);
 
   const numberToGuessRandom = () => {
     const numberToGuess = Math.floor(Math.random() * (21 - 1)) + 1;
 
     setNumberRandom(numberToGuess);
 
-    console.log(`soy el numero a adivinar`, numberToGuess);
+    // console.log(`soy el numero a adivinar`, numberToGuess);
   };
 
   const handleNumberUser = (e) => {
@@ -46,10 +46,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(`usernumber2`, numberUser, `numero a acertar2`, numberRandom);
-
     if (numberRandom === numberUser) {
-      console.log(`has acertado wey`);
       setCorrectAnswer(true);
       numberToGuessRandom();
       setScore(score + points);
@@ -66,7 +63,6 @@ function App() {
     }
 
     if (numberRandom !== numberUser) {
-      console.log(`has fallado wey`);
       setPoints(points - 1);
       if (numberRandom > numberUser) {
         setClue(`⬇ Too low!`);
@@ -75,8 +71,6 @@ function App() {
       }
     }
   };
-
-  console.log(`numero usuario***`, numberUser);
 
   useEffect(() => {
     numberToGuessRandom();
@@ -141,7 +135,6 @@ function App() {
   }, [score]);
 
   if (loadingName == false) {
-    console.log(`soy los usuarios first`, allScores);
     return (
       <>
         <div className='theme-black-name'>
@@ -161,13 +154,12 @@ function App() {
               </form>
             </div>
             <h1 className='guess-number-name'>Guess the Number!</h1>
-            <div class='number'>?</div>
+            <div className='number'>?</div>
           </header>
         </div>
       </>
     );
   } else {
-    console.log(`soy los usuarios`, userPlaying);
     return (
       <>
         <div className={theme ? `green` : `black`}>
@@ -178,12 +170,12 @@ function App() {
             {/*             <button class='btn again' type='submit'>
               Level!
             </button> */}
-            <div class='number'>?</div>
+            <div className='number'>?</div>
           </header>
           <main>
             <section className='left'>
               <p className='label-highscore'>
-                🥇 Highscore: <span class='highscore'></span>
+                🥇 Highscore: <span className='highscore'></span>
               </p>
               {allScores.map((user) => (
                 <>
@@ -204,7 +196,7 @@ function App() {
               <form onSubmit={handleSubmit}>
                 <input
                   type='number'
-                  class='guess'
+                  className='guess'
                   name='numberUser'
                   value={numberUser}
                   onChange={handleNumberUser}
@@ -215,15 +207,15 @@ function App() {
             <section className='right'>
               <p className='message'>{clue}</p>
               <p className='label-score'>
-                ⚡ Score: <span class='score'>{points}</span>
+                ⚡ Score: <span className='score'>{points}</span>
               </p>
               <p className='label-score'>
-                💯 Total Score: <span class='score'>{score}</span>
+                💯 Total Score: <span className='score'>{score}</span>
               </p>
             </section>
             <section className='down'>
               <p className='label-highscore'>
-                🥇 Highscore: <span class='highscore'></span>
+                🥇 Highscore: <span className='highscore'></span>
               </p>
               {allScores.map((user) => (
                 <>
