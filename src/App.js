@@ -67,7 +67,7 @@ function App() {
       if (numberRandom > numberUser) {
         setClue(`⬇ Too low!`);
       } else {
-        setClue(`⬆ Too hight!`);
+        setClue(`⬆ Too high!`);
       }
     }
   };
