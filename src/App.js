@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [numberRandom, setNumberRandom] = useState(-1);
-  const [numberUser, setNumberUser] = useState(0);
-  const [nameUser, setNameUser] = useState(``);
+  const [numberUser, setNumberUser] = useState(``);
+  const [nameUser, setNameUser] = useState();
   const [points, setPoints] = useState(10);
   const [score, setScore] = useState(0);
   const [aciertos, setAciertos] = useState(0);
@@ -66,8 +66,10 @@ function App() {
       setPoints(points - 1);
       if (numberRandom > numberUser) {
         setClue(`⬇ Too low!`);
+        setNumberUser(``);
       } else {
         setClue(`⬆ Too high!`);
+        setNumberUser(``);
       }
     }
   };
