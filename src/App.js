@@ -376,15 +376,7 @@ function App() {
   };
 
   useEffect(() => {
-    numberToGuessRandom();
-    axios
-      .get(`${API_URL}/users`)
-      .then((response /* console.log(`soy la response del users`, response.data)) */) =>
-        setAllScores(response.data)
-      )
-      .catch((error) => console.log(error));
-
-    let scoreUpdate = {
+    /*     let scoreUpdate = {
       userName: nameUser,
       score: score,
     };
@@ -392,21 +384,30 @@ function App() {
     axios
       .post(`${API_URL}/scores`, scoreUpdate)
       .then((response) => setMyScore(response.data))
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error)); */
   }, []);
 
   useEffect(() => {
+    axios
+      .get(`${API_URL}/users`)
+      .then((response /* console.log(`soy la response del users`, response.data)) */) =>
+        setAllScores(response.data)
+      )
+      .catch((error) => console.log(error));
+
     let userPlay = {
       userName: nameUser,
       score: score,
     };
 
     axios
-      .post(`${API_URL}/user-playing`, userPlay)
+      .post(`${API_URL}/user-home`, userPlay)
       .then((response /* console.log(`soy la response del users`, response.data)) */) =>
         setUserPlaying(response.data)
       )
       .catch((error) => console.log(error));
+
+    numberToGuessRandom();
   }, [loadingName]);
 
   useEffect(() => {
@@ -416,22 +417,25 @@ function App() {
     };
 
     axios
-      .post(`${API_URL}/scores`, scoreUpdate)
-      .then((response) => setMyScore(response.data))
+      .post(`${API_URL}/user-playing`, scoreUpdate)
+      .then((response /* console.log(`soy la response del users`, response.data)) */) =>
+        // console.log(`soy la response de USER PLAYING `, response)
+        setUserPlaying(response.data)
+      )
       .catch((error) => console.log(error));
 
     axios
-      .post(`${API_URL}/user-playing`, scoreUpdate)
-      .then((response /* console.log(`soy la response del users`, response.data)) */) =>
-        setUserPlaying(response.data)
-      )
+      .post(`${API_URL}/scores`, scoreUpdate)
+      .then((response) => setMyScore(response.data))
       .catch((error) => console.log(error));
 
     setTimeout(() => {
       axios
         .get(`${API_URL}/users`)
-        .then((response /* console.log(`soy la response del users`, response.data)) */) =>
-          setAllScores(response.data)
+        .then(
+          (response /* console.log(`soy la response del users`, response.data)) */) =>
+            setAllScores(response.data),
+          console.log(allScores)
         )
         .catch((error) => console.log(error));
     }, 1000);
