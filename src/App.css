@@ -402,3 +402,57 @@ main {
     font-size: 4rem;
   }
 }
+
+@media (max-height: 500px) {
+  .number {
+    display: none;
+  }
+  .down {
+    display: none;
+  }
+  .central {
+    padding-top: 30%;
+  }
+
+  .again2 {
+    padding: 1rem 1rem;
+    top: 41vh;
+    left: 72vw;
+  }
+
+  .again {
+    padding: 1rem 1rem;
+    top: 41vh;
+    left: 18vw;
+  }
+  .between {
+    top: 11.5rem;
+  }
+
+  .black {
+    height: 120vh;
+  }
+
+  .green {
+    height: 120vh;
+  }
+
+  .red {
+    height: 120vh;
+  }
+
+  .guess-central {
+    font-size: 3rem;
+  }
+
+  .guessNumber {
+    top: 46%;
+  }
+
+  .down-name {
+    display: none;
+  }
+  .header-name {
+    height: 115vh;
+  }
+}
