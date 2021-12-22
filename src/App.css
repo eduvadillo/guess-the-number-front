@@ -403,7 +403,7 @@ main {
   }
 }
 
-@media (min-height: 500px) {
+@media (max-height: 500px) {
   .number {
     display: none;
   }
@@ -460,205 +460,16 @@ main {
   }
 }
 
-@media (max-width: 426px) {
+@media (min-height: 375px) and (max-height: 420px) {
   .again2 {
     padding: 1rem 1rem;
-    top: 42vh;
+    top: 38vh;
     left: 72vw;
   }
-
   .again {
-    padding: 1rem 1rem;
-    top: 42vh;
-    left: 18vw;
+    top: 38vh;
   }
-  .number {
-    display: none;
-  }
-  .down {
-    display: none;
-  }
-  .central {
-    padding-top: 30%;
-  }
-
   .between {
-    top: 11.5rem;
-  }
-
-  .black {
-    height: 120vh;
-  }
-
-  .green {
-    height: 120vh;
-  }
-
-  .red {
-    height: 120vh;
-  }
-
-  .guess-central {
-    font-size: 3rem;
-  }
-
-  .guessNumber {
-    top: 46%;
-  }
-
-  .down-name {
-    display: none;
-  }
-  .header-name {
-    height: 115vh;
-  }
-  .theme-black-name {
-    height: 115vh;
-  }
-}
-
-@media (min-width: 426px) {
-  .again2 {
-    padding: 1rem 1rem;
-    top: 43vh;
-    left: 72vw;
-  }
-
-  .again {
-    padding: 1rem 1rem;
-    top: 43vh;
-    left: 18vw;
-  }
-  .number {
-    display: none;
-  }
-  .down {
-    display: none;
-  }
-  .central {
-    padding-top: 30%;
-  }
-
-  .between {
-    top: 11.5rem;
-  }
-
-  .black {
-    height: 120vh;
-  }
-
-  .green {
-    height: 120vh;
-  }
-
-  .red {
-    height: 120vh;
-  }
-
-  .guess-central {
-    font-size: 3rem;
-  }
-
-  .guessNumber {
-    top: 46%;
-  }
-
-  .down-name {
-    display: none;
-  }
-  .header-name {
-    height: 115vh;
-  }
-  .theme-black-name {
-    height: 115vh;
-  }
-}
-
-@media (min-width: 476px) {
-  .again2 {
-    padding: 1rem 1rem;
-    top: 44vh;
-    left: 72vw;
-  }
-
-  .again {
-    padding: 1rem 1rem;
-    top: 44vh;
-    left: 18vw;
-  }
-  .number {
-    display: none;
-  }
-  .down {
-    display: none;
-  }
-  .central {
-    padding-top: 30%;
-  }
-
-  .between {
-    top: 11.5rem;
-  }
-
-  .black {
-    height: 120vh;
-  }
-
-  .green {
-    height: 120vh;
-  }
-
-  .red {
-    height: 120vh;
-  }
-
-  .guess-central {
-    font-size: 3rem;
-  }
-
-  .guessNumber {
-    top: 46%;
-  }
-
-  .down-name {
-    display: none;
-  }
-  .header-name {
-    height: 115vh;
-  }
-  .theme-black-name {
-    height: 115vh;
-  }
-}
-
-@media (min-height: 425px) {
-  .central {
-    padding-top: 35%;
-  }
-  .again2 {
-    padding: 1rem 1rem;
-    top: 44vh;
-  }
-  .again {
-    top: 44vh;
-  }
-}
-
-@media (min-height: 400px) {
-  .central {
-    padding-top: 40%;
-  }
-}
-
-@media (max-height: 400px) {
-  .central {
-    padding-top: 46%;
-  }
-  .again2 {
-    padding: 1rem 1rem;
-    top: 46vh;
-  }
-  .again {
-    top: 46vh;
+    top: 9.5rem;
   }
 }
