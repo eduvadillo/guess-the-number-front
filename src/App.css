@@ -26,7 +26,7 @@ html {
 
 .header-name {
   position: relative;
-  height: 75vh;
+  height: 70vh;
   border-bottom: 7px solid #eee;
 }
 
@@ -90,6 +90,11 @@ html {
 
 .green {
   background-color: rgb(55, 230, 28);
+  font-family: "Press Start 2P", sans-serif;
+}
+
+.red {
+  background-color: rgb(233, 42, 24);
   font-family: "Press Start 2P", sans-serif;
 }
 
@@ -172,6 +177,26 @@ main {
   position: absolute;
   top: 2rem;
   left: 2rem;
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.again2 {
+  position: absolute;
+  top: 10rem;
+  left: 2rem;
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
 }
 
 .guess {
@@ -187,17 +212,40 @@ main {
   margin-bottom: 3rem;
 }
 
-.btn {
+.guess-central {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.check {
   border: none;
   background-color: #eee;
   color: #222;
   font-size: 2rem;
   font-family: inherit;
-  padding: 2rem 3rem;
+  padding: 2rem 11.4rem;
   cursor: pointer;
 }
 
-.btn:hover {
+.check-central {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 6.5rem;
+  cursor: pointer;
+}
+
+.check:hover {
   background-color: #ccc;
 }
 
@@ -229,6 +277,16 @@ main {
   display: none;
 }
 
+.down-name {
+  padding: 0px 20px;
+  display: flex;
+  height: 13vh;
+  margin-top: 9rem;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (max-width: 500px) {
   main {
     flex-direction: column;
@@ -255,7 +313,7 @@ main {
   }
 
   .black {
-    height: 122vh;
+    height: 124vh;
   }
 
   .message {
@@ -270,7 +328,7 @@ main {
   .between {
     font-size: 1.4rem;
     position: absolute;
-    top: 37rem;
+    top: 38.5rem;
     left: 17%;
   }
   .header {
@@ -279,10 +337,35 @@ main {
 
   .guessNumber {
     font-size: 3rem;
+    top: 33%;
+  }
+
+  .guess-central {
+    width: 25rem;
+    margin-bottom: 4rem;
+    padding: 0rem;
+  }
+
+  .again {
+    top: 23rem;
+  }
+
+  .again2 {
+    top: 23rem;
+    left: 27rem;
+  }
+
+  .check-central {
+    padding: 1rem 6.5rem;
+    margin-top: 1rem;
   }
 
   .your-name-guess {
-    font-size: 2rem;
+    display: none;
+  }
+
+  .header-guess {
+    height: 21vh;
   }
 
   .down {
@@ -291,12 +374,31 @@ main {
     padding-top: 2rem;
   }
   .header-name {
-    height: 70vh;
+    height: 55vh;
+  }
+
+  .guess-number-name {
+    font-size: 4rem;
+  }
+
+  .rules-name {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .down-name {
+    margin-top: 8rem;
   }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 511px) and (max-width: 670px) {
   .header-name {
-    height: 87vh;
+    height: 70vh;
+  }
+  .your-name-name {
+    font-size: 3rem;
+  }
+  .guess-number-name {
+    font-size: 4rem;
   }
 }
