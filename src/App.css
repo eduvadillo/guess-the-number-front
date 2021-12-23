@@ -403,7 +403,7 @@ main {
   }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 665px) {
   .number {
     display: none;
   }
