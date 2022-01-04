@@ -60,7 +60,7 @@ function App() {
   const numberToGuessRandom = () => {
     const numberToGuess = Math.floor(Math.random() * (howNumbers - 1)) + 1;
     setNumberRandom(numberToGuess);
-    console.log(`soy el numero a acertar`, numberToGuess);
+    /*  console.log(`soy el numero a acertar`, numberToGuess); */
   };
 
   const handleNumberUser = (e) => {
@@ -101,7 +101,7 @@ function App() {
         setCounter(60);
         setRandomAgain(false);
         setlevel3(true);
-        console.log(`aqui esta llegando?`, howNumbers);
+        /*  console.log(`aqui esta llegando?`, howNumbers); */
       }, 3000);
     }
     if (aciertos === 6 && level3) {
@@ -125,7 +125,7 @@ function App() {
         setRandomAgain(false);
         setlevel3(false);
         setlevel4(true);
-        console.log(`llega a los aciertos 5 para random grande`, howNumbers);
+        /*  console.log(`llega a los aciertos 5 para random grande`, howNumbers); */
       }, 3000);
     }
     if (aciertos === 9 && level4) {
@@ -151,7 +151,7 @@ function App() {
         setlevel4(false);
         setlevel5(true);
 
-        console.log(`aqui esta llegando al de 8?`, howNumbers);
+        /*  console.log(`aqui esta llegando al de 8?`, howNumbers); */
       }, 3000);
     }
     if (aciertos === 13 && level5) {
@@ -175,7 +175,7 @@ function App() {
         setRandomAgain(false);
         setlevel5(false);
         setlevel6(true);
-        console.log(`llega a los aciertos 12 para random grande`, howNumbers);
+        /*   console.log(`llega a los aciertos 12 para random grande`, howNumbers); */
       }, 3000);
     }
   }, [randomAgain]);
@@ -183,8 +183,8 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(`soy el numero de aciertos`, aciertos);
-    console.log(`soy el numero de nivel`, level);
+    /* console.log(`soy el numero de aciertos`, aciertos);
+    console.log(`soy el numero de nivel`, level); */
 
     if (numberRandom === numberUser) {
       if (aciertos !== 3 && level2) {
@@ -205,13 +205,13 @@ function App() {
           numberToGuessRandom();
           setTimmer(true);
           setCounter(seconds);
-          console.log(`aqui si que llega al diferente a 2 `, howNumbers);
+          /*  console.log(`aqui si que llega al diferente a 2 `, howNumbers); */
         }, 3000);
       } else {
         if (aciertos === 3) {
-          setHowNumbers(300);
+          setHowNumbers(80);
           setRandomAgain(true);
-          console.log(`esta pasando`, howNumbers);
+          /* console.log(`esta pasando`, howNumbers); */
         }
       }
       if (aciertos !== 6 && level3) {
@@ -232,17 +232,17 @@ function App() {
           numberToGuessRandom();
           setTimmer(true);
           setCounter(seconds);
-          console.log(`aqui si que llega al diferente a 5 `, howNumbers);
+          /*  console.log(`aqui si que llega al diferente a 5 `, howNumbers); */
         }, 3000);
       } else {
         if (aciertos === 6) {
-          setHowNumbers(600);
+          setHowNumbers(150);
           setRandomAgain(false);
-          console.log(`esta pasando lo del 5`, howNumbers);
+          /*  console.log(`esta pasando lo del 5`, howNumbers); */
         }
       }
       if (aciertos !== 9 && level4) {
-        console.log(`**************aciertos 8************`);
+        /*   console.log(`**************aciertos 8************`); */
         setTimmer(false);
         setCounter(false);
         setAciertos(aciertos + 1);
@@ -260,17 +260,17 @@ function App() {
           numberToGuessRandom();
           setTimmer(true);
           setCounter(seconds);
-          console.log(`aqui si que llega `, howNumbers, `vamos a ver el level4`, level4);
+          /*  console.log(`aqui si que llega `, howNumbers, `vamos a ver el level4`, level4); */
         }, 3000);
       } else {
         if (aciertos === 9) {
-          setHowNumbers(1200);
+          setHowNumbers(300);
           setRandomAgain(true);
-          console.log(`esta pasando lo del nivel 4 para 5`, howNumbers);
+          /*  console.log(`esta pasando lo del nivel 4 para 5`, howNumbers); */
         }
       }
       if (aciertos !== 13 && level5) {
-        console.log(`**************aciertos 12************`);
+        /*  console.log(`**************aciertos 12************`); */
         setAciertos(aciertos + 1);
         setTimmer(false);
         setCounter(false);
@@ -288,17 +288,17 @@ function App() {
           numberToGuessRandom();
           setTimmer(true);
           setCounter(seconds);
-          console.log(`aqui si que llega `, howNumbers);
+          /*  console.log(`aqui si que llega `, howNumbers); */
         }, 3000);
       } else {
         if (aciertos === 13) {
-          setHowNumbers(2400);
+          setHowNumbers(600);
           setRandomAgain(true);
-          console.log(`esta pasando`, howNumbers);
+          /*  console.log(`esta pasando`, howNumbers); */
         }
       }
       if (level6) {
-        console.log(`**************level6************`);
+        /*   console.log(`**************level6************`); */
         /* setAciertos(aciertos + 1); */
         setTimmer(false);
         setCounter(false);
@@ -316,12 +316,12 @@ function App() {
           numberToGuessRandom();
           setTimmer(true);
           setCounter(seconds);
-          console.log(`aqui si que llega  desde el level 6!!!`, howNumbers);
+          /*   console.log(`aqui si que llega  desde el level 6!!!`, howNumbers); */
         }, 3000);
       }
     }
 
-    console.log(`counter`, counter);
+    /*  console.log(`counter`, counter); */
 
     if (numberRandom !== numberUser) {
       setPoints(points - 1);
